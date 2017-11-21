@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Learning Lists</h1>
+
+<% @lists.each do |list| %>
+  <table>
+    <tr>
+      <th>List: <%= list.name%></th>
+      <% list.attemps.each_with_index do |attemp, index| %>
+        <th>Attemp: <%= index + 1 %></th>
+      <% end %>
+    </tr>
+    <% list.list_items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <% show_answers(list, item).each do |attemp| %>
+          <td> 
+            <input id="checkBox" type="checkbox"  onclick="return false;" <%= 'checked' if attemp.marked %> /> 
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+
+<%= link_to 'Go Back', root_path, class: 'list-btn' %>

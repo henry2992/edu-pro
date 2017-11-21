@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Learning Lists</h1>
+
+<% @lists.each do |list| %>
+  <h3>List: <%= list.name%></h3>
+
+  <table>
+    <% list.list_items.each do |item| %>
+      <tr>
+        <td></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <p>Items in list: <%= list.list_items.count %></p>
+  <%= link_to 'Show', list_path(list), class: 'list-btn' %>
+<% end %>
+<br />
+<br />
+<%= link_to 'Go Back', root_path, class: 'list-btn' %>
