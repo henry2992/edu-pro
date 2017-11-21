@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repository contains the code for The prototype of an Education App. 
 
-Things you may want to cover:
+### Table of Contents
+* [Getting Started](#getting-started)
+* [Technologies](#technologies)
 
-* Ruby version
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
 
-* Configuration
+- First clone the repository: git clone git@github.com:henry2992/edu-pro.git
+- In the repository application run: bundle install
+- Install db and run migrations: bundle exec rails db:create db:migrate db:seed
+- Start the server: bundle exec rails s
+- To run tests: bundle exec rspec
+- You will have a testing administrator: email: 'admin@example.com', password: 'password'
 
-* Database creation
+## Technologies
 
-* Database initialization
+- Ruby 2.4.1
+- Rails  5.1.4
+- Postgress 9.1
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
