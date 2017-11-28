@@ -11,10 +11,10 @@ RSpec.describe ListsController, type: :controller do
       expect(response).to be_success
     end
 
-    it "assigns @lists" do
+    it "returns first Item in list" do
       list = List.create(name: 'Countries')
       get :index
-      expect(assigns(:lists)).to eq([list])
+      expect(assigns(:list)).to eq(list)
     end
   end
 

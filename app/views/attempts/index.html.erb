@@ -6,16 +6,16 @@
   <table>
     <tr>
       <th>List: <%= list.name%></th>
-      <% list.attemps.each_with_index do |attemp, index| %>
-        <th>Attemp: <%= index + 1 %></th>
+      <% list.attempts.each_with_index do |attemtp, index| %>
+        <th>Attemtp: <%= index + 1 %></th>
       <% end %>
     </tr>
     <% list.list_items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
-        <% show_answers(list, item).each do |attemp| %>
+        <% show_answers(list, item).each do |attempt| %>
           <td> 
-            <input id="checkBox" type="checkbox"  onclick="return false;" <%= 'checked' if attemp.marked %> /> 
+            <input id="checkBox" type="checkbox"  onclick="return false;" <%= 'checked' if attempt.marked %> /> 
           </td>
         <% end %>
       </tr>

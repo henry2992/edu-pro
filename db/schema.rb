@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171121062748) do
+ActiveRecord::Schema.define(version: 20171128001610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,17 +50,17 @@ ActiveRecord::Schema.define(version: 20171121062748) do
     t.string "name"
     t.integer "list_item_id"
     t.boolean "marked"
-    t.bigint "attemp_id"
+    t.bigint "attempt_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["attemp_id"], name: "index_answers_on_attemp_id"
+    t.index ["attempt_id"], name: "index_answers_on_attempt_id"
   end
 
-  create_table "attemps", force: :cascade do |t|
+  create_table "attempts", force: :cascade do |t|
     t.bigint "list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["list_id"], name: "index_attemps_on_list_id"
+    t.index ["list_id"], name: "index_attempts_on_list_id"
   end
 
   create_table "list_items", force: :cascade do |t|

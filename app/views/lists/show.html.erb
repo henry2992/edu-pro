@@ -2,7 +2,7 @@
 <h1>Learning Lists</h1>
 <h3>List: <%= @list.name%></h3>
 
-<%= form_for(Attemp.new, url: attemps_path, method: :post ) do |f| %>
+<%= form_for(Attempt.new, url: attempts_path, method: :post ) do |f| %>
   <table>
     <% @list.list_items.each do |item| %>
       <tr>
@@ -12,7 +12,8 @@
   </table>
   <%= hidden_field_tag :list, @list.id  %>
 	<p>Items selected: <span id='selected_items'>0</span></p>
-  <%= submit_tag("Submit") %>
+  <%= submit_tag("Submit and Finish") %>
+  <%= submit_tag("Submit and Next List") %>
 <% end %>
 
 <br>

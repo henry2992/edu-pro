@@ -1,3 +1,3 @@
 class Answer < ApplicationRecord
-	belongs_to :attemp
+	belongs_to :attempt
 end
